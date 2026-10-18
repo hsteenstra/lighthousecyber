@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Notice · Lighthouse</title>
+<meta name="description" content="How Lighthouse collects and uses information.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/core.css?v=22">
+<style>
+  .policy { max-width: 760px; margin: 0 auto; padding: 56px 24px 90px; }
+  .policy h1 { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -.03em; margin: 10px 0 6px; }
+  .policy .updated { color: var(--muted); font-size: .9rem; margin-bottom: 30px; }
+  .policy h2 { font-size: 1.25rem; font-weight: 800; margin: 34px 0 10px; }
+  .policy p, .policy li { color: var(--ink-2); }
+  .policy ul { padding-left: 20px; }
+  .policy li { margin: 6px 0; }
+  .policy table { width: 100%; border-collapse: collapse; font-size: .92rem; margin-top: 8px; }
+  .policy th, .policy td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .policy th { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .policy .reset { margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="partner-strip"><span>Developed by Harper Steenstra &middot; In partnership with the Maine Department of Education</span></div>
+<header class="topbar"><a class="brand" href="./"><span id="mark"></span><span><span class="brand-name">LIGHTHOUSE</span><br><span class="brand-sub">Cybersecurity Readiness</span></span></a><span class="spacer"></span><a class="tb-btn" id="portal-link" href="./">Portal</a></header>
+<main class="policy">
+  <div class="eyebrow" style="color:var(--blue-600)">Lighthouse</div>
+  <h1>Privacy notice</h1>
+  <div class="updated">Last updated October 16, 2026</div>
+
+  <p>Lighthouse is a cybersecurity training program for Maine middle schools, high schools, and school staff, developed by Harper Steenstra in partnership with the Maine Department of Education. This notice explains how Lighthouse handles information.</p>
+
+  <h2>We do not collect your information</h2>
+  <p>Lighthouse has no accounts and no sign-in. Nothing you type or click, including your answers, reflections, password lab entries, and the name on your certificate, is sent to us or to anyone else.</p>
+
+  <h2>What is saved on your device</h2>
+  <p>Lighthouse uses your browser's storage, which works like cookies, to remember:</p>
+  <ul>
+    <li>Which steps and modules you have finished</li>
+    <li>Reflections you type in the educator course</li>
+    <li>The name, school, and grade or role you enter for your certificate</li>
+    <li>Your cookie choice</li>
+  </ul>
+  <p>This information stays in the browser on the device you used. It is not shared, and you can erase it at any time by clearing your browser's site data. On a shared computer, the next person who uses the same browser can see your progress.</p>
+
+  <h2>Cookies</h2>
+  <p>The storage above is essential for saving your progress. Lighthouse does not use advertising or analytics cookies. Fonts are loaded from Google Fonts, which receives your browser's standard connection information.</p>
+  <button class="btn ghost sm reset" id="reset-consent">Change my cookie choice</button>
+
+  <h2>Questions</h2>
+  <p>If you have questions about Lighthouse, contact your school's administrator.</p>
+</main>
+<script src="assets/consent.js?v=22"></script>
+<script src="assets/art.js?v=22"></script>
+<script>
+  document.getElementById('mark').outerHTML = brandMark();
+  document.getElementById('portal-link').innerHTML = icon('home') + ' Portal';
+  document.getElementById('reset-consent').onclick = () => { try { localStorage.removeItem('lighthouse:consent'); } catch (e) {} location.reload(); };
+</script>
+</body>
+</html>
