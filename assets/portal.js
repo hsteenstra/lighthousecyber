@@ -36,7 +36,7 @@
   </section>
 
   <section class="ev-why" id="why"><div class="wrap">
-    <h2 class="ev-center">The Lighthouse Difference</h2>
+    <h2 class="ev-center">What Lighthouse Offers</h2>
     <div class="ev-why-grid">${why.map(([ic, t, d]) => `<div class="ev-why-item"><div class="ev-why-ic">${icon(ic)}</div><h3><span>${t}</span></h3><p>${d}</p></div>`).join('')}</div>
   </div></section>
 
